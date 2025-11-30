@@ -1,0 +1,21 @@
+theme: jekyll-theme-cayman
+
+lang: en
+
+timezone: America/New_York
+
+title: LeFizzim''s Creations
+
+description: GitHub.io of LeFizzim (LFSMx)
+
+url: https://lefizzim.github.io
+
+github:
+  username: cgoldberg
+
+social:
+  links:
+    - https://github.com/LeFizzim
+    - https://www.twitch.tv/lfsmx
+
+theme_mode: dark
