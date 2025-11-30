@@ -4,18 +4,10 @@ lang: en
 
 timezone: America/New_York
 
+name: Test Name
+
+tagline: Test Tagline
+
 title: LeFizzim''s Creations
-
-description: GitHub.io of LeFizzim (LFSMx)
-
-url: https://lefizzim.github.io
-
-github:
-  username: LeFizzim
-
-social:
-  links:
-    - https://github.com/LeFizzim
-    - https://www.twitch.tv/lfsmx
 
 theme_mode: dark
