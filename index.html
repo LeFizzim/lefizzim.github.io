@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeFizzim's Swarm Fighter</title>
+    <style>
+        /* CRITICAL FIX: Ensure ALL elements have zero padding/margin by default */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Reset margins and set the main body to fill the viewport */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevents scrollbars */
+            height: 100%;
+            background-color: #333;
+        }
+
+        /* Use Flexbox for the overall layout */
+        #main-layout {
+            display: flex;
+            height: 100%;
+            /* Fill the entire viewport height */
+        }
+
+        /* Fixed-width panel on the left for future UI */
+        #left-panel {
+            width: 200px;
+            /* Adjust this value to change the width of your sidebar */
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 10px;
+            font-family: sans-serif;
+            flex-shrink: 0;
+            /* Prevents the panel from shrinking */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #left-panel h2 {
+            font-size: 1.2rem;
+            /* Reduced font size to fit text */
+            margin-top: 0;
+        }
+
+        #inventory-container {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        #inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        .inventory-slot {
+            aspect-ratio: 1 / 1;
+            background-color: #333;
+            /* Lighter grey than panel */
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+
+        /* Game container fills the remaining space */
+        #game-container {
+            flex-grow: 1;
+            /* Allows the container to fill all remaining width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Ensure the container itself has no added offset */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-layout">
+        <div id="left-panel">
+            <div>
+                <h2>LeFizzim's<br>Swarm Fighter</h2>
+                <div id="stats-container" style="margin-top: 20px; text-align: center;">
+                    <p style="margin: 5px 0;">Total Gold: <span id="total-gold" style="color: gold;">0</span></p>
+                </div>
+            </div>
+
+            <div id="inventory-container">
+                <h3 style="margin-bottom: 5px; font-size: 1rem;">Weapon Inventory</h3>
+                <div id="inventory-grid">
+                    <div class="inventory-slot"></div>
+                    <div class="inventory-slot"></div>
+                    <div class="inventory-slot"></div>
+                    <div class="inventory-slot"></div>
+                    <div class="inventory-slot"></div>
+                    <div class="inventory-slot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+
+    <script src="dom.js"></script>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>
