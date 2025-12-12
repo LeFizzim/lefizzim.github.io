@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+      #title { margin-bottom: 0 !important; }
+      html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+      body > .wrapper { flex: 1 0 auto; display: flex; flex-direction: column; }
+      section { flex: 1; display: flex; flex-direction: column; align-items: center; }
+      .footer-credits { margin-top: auto; padding-top: 20px; width: 100%; }
+    </style>
     {% include head-custom.html %}
   </head>
   <body>
@@ -41,11 +48,15 @@
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
         </div>
 
         {{ content }}
+
+        <div class="footer-credits">
+          <hr>
+          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+        </div>
 
       </section>
 
