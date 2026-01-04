@@ -9,3 +9,6 @@ image: /assets/images/logo.png
 plugins:
   - jekyll-sitemap
   - jekyll-readme-index
+
+exclude:
+  - CLAUDE.md
