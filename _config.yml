@@ -12,3 +12,4 @@ plugins:
 
 exclude:
   - CLAUDE.md
+  - vendor
