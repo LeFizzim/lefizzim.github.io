@@ -8,8 +8,4 @@ sitemap: false
     <loc>https://lefizzim.github.io/sitemap.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </sitemap>
-  <sitemap>
-    <loc>https://lefizzim.github.io/Gravity-Miner/sitemap.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  </sitemap>
 </sitemapindex>
